@@ -4,3 +4,26 @@
     math-depth: 34px;
 
 }
+
+
+/* 
+<VirtualHost *:80>
+ServerName localhost
+DocumentRoot /opt/moodle/public_html
+
+<Directory /opt/moodle/public_html>
+Option -Indexes +FollowSysLinks +MultiViews
+AllowOverride All
+Require all granted
+</Directory>
+
+<FileMatch \.php$>
+SetHandler "proxy:unix:/run/php/php8.1-fpm.sock|fcgi://localhost/"
+</FileMatch>
+
+Errorlog /opt/log/error.log
+Customlog /opt/log/access.log
+</VirtualHost>
+
+
+*/
